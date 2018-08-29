@@ -1,0 +1,10 @@
+version: '3'
+service:
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    volumes:
+      - .volumes/portainer/portainer_data:/data
+      - -v /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 9000:9000
